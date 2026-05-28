@@ -8,7 +8,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MODEL = ROOT / "hybridnets_256x384.onnx"
-DEFAULT_ANCHORS = ROOT / "anchors_512x640.npy"
+DEFAULT_ANCHORS = ROOT / "anchors_256x384.npy"
 
 
 def size_mb(path: Path) -> float:

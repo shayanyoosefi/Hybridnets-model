@@ -5,7 +5,7 @@ This repository contains a local HybridNets ONNX model smoke-test setup.
 Current model assets:
 
 - `hybridnets_256x384.onnx`
-- `anchors_512x640.npy`
+- `anchors_256x384.npy`
 
 ## Setup
 
@@ -49,15 +49,9 @@ If that wrapper is not installed as a package, pass its directory with `--wrappe
 python video-road-detection.py \
   --video path/to/input.mp4 \
   --model hybridnets_256x384.onnx \
-  --anchors anchors_512x640.npy \
+  --anchors anchors_256x384.npy \
   --wrapper-path path/to/ONNX-HybridNets-Multitask-Road-Detection \
   --output outputs/output_hybridnets.mp4
 ```
 
 The script infers resize dimensions from the model filename when it can. For `hybridnets_256x384.onnx`, it resizes frames to width `384` and height `256` unless `--input-size WIDTH HEIGHT` is provided.
-
-## Notes
-
-- The repository is already initialized as Git and has an `origin` remote configured.
-- The bundled ONNX model is about 54 MB. GitHub accepts files under 100 MB, but Git LFS is still a better long-term option if you plan to version multiple models.
-- The current model filename implies `256x384`, while the anchor filename implies `512x640`. Confirm these assets were generated for the same model input resolution before trusting inference results.

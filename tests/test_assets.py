@@ -9,7 +9,7 @@ import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
 MODEL_PATH = ROOT / "hybridnets_256x384.onnx"
-ANCHOR_PATH = ROOT / "anchors_512x640.npy"
+ANCHOR_PATH = ROOT / "anchors_256x384.npy"
 
 
 def test_model_file_exists() -> None:
