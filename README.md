@@ -19,6 +19,16 @@ pip install -r requirements.txt
 
 For CUDA execution, use `requirements-gpu.txt` instead of `requirements.txt`. Do not install both `onnxruntime` and `onnxruntime-gpu` in the same environment unless you know you need that layout.
 
+## HybridNets Wrapper
+
+Install the external HybridNets wrapper used by the video runner:
+
+```bash
+cd /workspace
+git clone https://github.com/ibaiGorordo/ONNX-HybridNets-Multitask-Road-Detection.git
+python -m pip install -r ONNX-HybridNets-Multitask-Road-Detection/requirements.txt
+```
+
 ## Smoke Tests
 
 Run the test suite:
