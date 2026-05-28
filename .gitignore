@@ -1,0 +1,47 @@
+# Python bytecode/cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Test and tooling caches
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Local editor and agent state
+.idea/
+.vscode/
+.codex/
+.agents/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Runtime outputs and local datasets
+outputs/
+runs/
+data/
+videos/
+*.mp4
+*.avi
+*.mov
+*.mkv
+output_*.mp4
+
+# Generated ONNX Runtime / optimizer artifacts
+*.ort
+*_optimized.onnx
+optimized_*.onnx
+
+# Logs
+*.log
